@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1-M06</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 95%; margin: auto; }
+        .dropdown { margin-bottom: 20px; }
+        .time-title, .level-title { font-size: 1.2em; font-weight: bold; }
+        .activity { margin-bottom: 30px; }
+        .banner { background-color: #4CAF50; color: white; padding: 10px; cursor: pointer; }
+        .title { font-weight: bold; }
+        .subtitle { font-style: italic; }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1-M06</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1</option>
+                <option value="K2">K2</option>
+                <option value="K3">K3</option>
+            </select>
+        </div>
+        
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <h2 id="selected-level" class="level-title">Nivel: K1</h2>
+        
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Asegúrate de tener listos todos los materiales indicados en la DIAPOSITIVA 1 antes de iniciar la misión.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Asegúrate de tener listos todos los materiales indicados en la Diapositiva 1 antes de iniciar la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Dar la bienvenida a los Genios y preparar el ambiente para el aprendizaje.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 2 “Bienvenida” y saluda a los niños mientras muestras el logo de Gnius Club, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, pequeños genios! Bienvenidos a otra aventura del CODE SQUAD. Hoy, ayudaremos a nuestros amigos los animalitos a entrar al granero, ¡pero necesitan nuestra ayuda para recordar el orden correcto! Antes, vamos a preparar nuestros cerebros para esta misión tan especial.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 3 “Gimnasio del CODE SQUAD” e invita a los niños a participar en la canción.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Antes de empezar nuestra misión en la granja, necesitamos entrenar nuestros cerebros! Vamos a hacer un ejercicio divertido en el gimnasio del CODE SQUAD. Escuchen la canción y sigan los patrones que nos indica. ¡Estén muy atentos, porque este entrenamiento nos ayudará a resolver el reto de hoy!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2 -->
+        <div id="activity-2" class="activity">
+            <div class="banner" onclick="toggleContent('baile_secuenciacion')">
+                <div class="title">💃 Actividad 2: Baile de Secuenciación ⏰ Tiempo: 2 minutos</div>
+                <div class="subtitle">Guiar a los niños en una actividad de secuenciación.</div>
+            </div>
+            <div id="baile_secuenciacion" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 4 “Baile de Secuenciación” e invita a los niños a seguir la canción.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Muy bien, genios! Ahora que estamos listos, ¡es hora de poner a prueba nuestro entrenamiento! Vamos a seguir las indicaciones de la canción. No se preocupen si la primera vez no pueden seguir todo lo que dice la canción, para eso es el gimnasio, para irnos ejercitando y que cada día sea más fácil.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3 -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('planteamiento_problema')">
+                <div class="title">🛠️ Actividad 3: Planteamiento del Problema ⏰ Tiempo: 2 minutos</div>
+                <div class="subtitle">Introducir el problema que los estudiantes deben resolver.</div>
+            </div>
+            <div id="planteamiento_problema" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 5, adopta la actitud de un cuentacuentos y narra la historia del diálogo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy nos espera una misión muy especial en la Granja de Don Pepe. En esta granja viven muchos animalitos: vacas, ovejas, cerdos y gallinas. Cada día, Don Pepe lleva a los animalitos al granero para que puedan descansar. ¡Pero hoy algo extraño está pasando! El granero no se abre, y los animalitos están confundidos porque no saben en qué orden deben entrar. Si no lo hacen correctamente, ¡se quedarán bajo el sol caliente! Vamos a ayudar a Don Pepe y a los animalitos a resolver este problema. ¿Listos?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6, sigue con la actitud del cuentacuentos y cuenta el reto para el CODE SQUAD.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Los animalitos necesitan nuestra ayuda para entrar al granero, pero hay un problema: solo pueden entrar si siguen el orden correcto. Tenemos que descubrir el patrón que deben seguir para que el granero se abra y puedan descansar.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 4 -->
+        <div id="activity-4" class="activity">
+            <div class="banner" onclick="toggleContent('formacion_parejas')">
+                <div class="title">🤝 Actividad 4: Formación de Parejas ⏰ Tiempo: 3 minutos</div>
+                <div class="subtitle">Formar equipos de trabajo y preparar a los estudiantes para la misión.</div>
+            </div>
+            <div id="formacion_parejas" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 7 "Formación de Equipos", explica la importancia de trabajar en equipo y junta a los niños en pares para trabajar en la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Cuando trabajamos juntos, ¡podemos hacer cosas asombrosas! Como construir una gran torre o resolver un acertijo difícil. ¿Saben qué? "Dos cabezas piensan mejor que una", y eso significa que cuando compartimos nuestras ideas con un amigo, ¡podemos lograr más cosas increíbles! Hoy, para nuestra misión en la granja, vamos a trabajar en parejas. Así que busquen a un amigo para formar equipo. Y si somos un número impar, ¡no se preocupen! Podemos hacer un grupo de tres para que nadie se quede sin compañero. ¡Vamos a unir fuerzas y divertirnos aprendiendo juntos!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 8 Verifica que todos los niños estén emparejados y organizados para trabajar.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Todos tienen a su compañero? ¡Perfecto! Ahora que están listos, recuerden que trabajar en pareja significa compartir, escuchar, y ayudarse mutuamente. ¡Cuanto más trabajen juntos, más divertida será la misión! Vamos a asegurarnos de que cada equipo esté listo para ayudar a los animalitos en la granja. ¡Juntos podemos hacerlo!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 5 -->
+        <div id="activity-5" class="activity">
+            <div class="banner" onclick="toggleContent('explicacion_reto')">
+                <div class="title">⚙️ Actividad 5: Explicación del Reto de Codificación ⏰ Tiempo: <span id="activity-5-total-time">Variable según el nivel</span></div>
+                <div class="subtitle">Explicar el reto de codificación que deberán resolver.</div>
+            </div>
+            <div id="explicacion_reto" class="content">
+                <table id="activity-5-content">
+                    <!-- Contenido insertado dinámicamente -->
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 6 -->
+        <div id="activity-6" class="activity">
+            <div class="banner" onclick="toggleContent('construccion_bloques')">
+                <div class="title">🔧 Actividad 6: Construcción con Bloques ⏰ Tiempo: <span id="activity-6-total-time">Variable según el nivel</span></div>
+                <div class="subtitle">Ensamblar robots utilizando los bloques y los códigos generados.</div>
+            </div>
+            <div id="construccion_bloques" class="content">
+                <table id="activity-6-content">
+                    <!-- Contenido insertado dinámicamente -->
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 7 -->
+        <div id="activity-7" class="activity">
+            <div class="banner" onclick="toggleContent('obstaculo_historia')">
+                <div class="title">⚠️ Actividad 7: Mensaje del Cuartel ⏰ Tiempo: <span id="activity-7-total-time">Variable según el nivel</span></div>
+                <div class="subtitle">Introducir un obstáculo en la narrativa para mantener el interés y la motivación.</div>
+            </div>
+            <div id="obstaculo_historia" class="content">
+                <table id="activity-7-content">
+                    <!-- Contenido insertado dinámicamente -->
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 8 -->
+        <div id="activity-8" class="activity">
+            <div class="banner" onclick="toggleContent('conclusion_historia')">
+                <div class="title">🎉 Actividad 8: Conclusión de la Historia ⏰ Tiempo: 5 minutos</div>
+                <div class="subtitle">Cerrar la historia y hacer preguntas reflexivas.</div>
+            </div>
+            <div id="conclusion_historia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (5 minutos):</strong> Reproduce la Diapositiva 26 "Conclusión y Cierre", lee el final del cuento y aprovecha para preguntar sobre lo que aprendieron hoy.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡CODE SQUAD, lo logramos! Gracias a su increíble trabajo en equipo y a seguir el 'Código de Rescate de la Granja', todos los animalitos han podido entrar al granero y ahora están descansando felices y seguros. ¡Qué emocionante ver cómo los ayudaron a encontrar el camino correcto! Don Pepe está muy agradecido y los animalitos están muy contentos. ¡Qué misión tan maravillosa hemos completado juntos! Ahora que hemos terminado, quiero hacerles algunas preguntas para recordar lo que aprendimos hoy:<br><br>1. ¿Por qué fue importante seguir el código para ayudar a los animalitos a entrar al granero?<br>2. ¿Qué patrón de colores utilizamos para guiar a los animalitos?<br>3. ¿Cómo se sintieron al ayudar a los animalitos a resolver el problema?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            var level = document.getElementById("class-level").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+            document.getElementById("selected-level").innerText = "Nivel: " + level;
+
+            var steps = {
+                "K1": {
+                    "5.1": [
+                          { "step": 1, "time": { "30": 1, "40": 1, "50": 1 }, "accion": "Reproduce la Diapositiva 9 y explica a los Genios en qué consiste el reto.", "dialogo": "¡CODE SQUAD! Para que los animalitos puedan entrar al granero, vamos a crear un código para ayudarlos a encontrar el patrón correcto. Vamos a utilizar los bloques para representar a nuestros amigos de la granja. Por ejemplo, podemos usar un bloque azul para la vaca,  y un bloque rojo para el pollo. Ustedes pueden elegir los colores que quieran. ¡Vamos a crear un código divertido y colorido para ayudar a los animalitos!" },
+                          { "step": 2, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 10, distribuye el papel y los materiales y asegúrate de que cada niño tenga material para trabajar en parejas.", "dialogo": "Aquí tienen su papel y colores. Ahora, en sus hojas, van a dibujar a los animalitos y asignarles bloques de color. Recuerden, vamos a ayudar a los animalitos a encontrar su camino al granero. ¡Prepárense para codificar!" },
+                          { "step": 3, "time": { "30": 5, "40": 7, "50": 10 }, "accion": "Reproduce la Diapositiva 11, supervisa el proceso de creación del código en pares. Resuelve dudas, explica o corrige lo que sea necesario.", "dialogo": "Trabajen juntos para dibujar su código. Recuerden, cada animalito debe tener su propio bloque de color. ¡Vamos a ver cuán bien pueden codificar!" }
+                         ],
+                    "6": [
+                          { "step": 1, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la DIAPOSITIVA 18 y dirige a los Genios para que intercambien los códigos que hicieron.", "dialogo": "¡Excelente trabajo, CODE SQUAD! Ahora, vamos a ayudar a los animalitos de la granja. Voy a pasar a ver sus códigos para ponerles nombre, los voy a recoger y se los voy a asignar a otro equipo. Cada equipo usará el código de otro equipo para asegurarse de que los animalitos sigan el patrón correcto. ¡Vamos a intercambiar los códigos y empezar a construir!" },
+                          { "step": 2, "time": { "30": 7, "40": 7, "50": 10 }, "accion": "Reproduce la DIAPOSITIVA 19 'Challenge de Reconocimiento de Patrones K1', entrega los códigos a los equipos uno a uno y que inicien a construir.", "dialogo": "¡Adelante, CODE SQUAD! Vamos a ayudar a los animalitos a encontrar su camino al granero. Usen el código que recibieron para organizar a los animalitos en el orden correcto. Recuerden seguir el patrón que está en el código. ¡Vamos a ver cómo lo hacen!" }
+                         ],
+                    "7": [
+                          { "step": 1, "time": { "30": 3, "40": 4, "50": 5 }, "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo a los Genios.", "dialogo": "¡CODE SQUAD! ¡Tenemos una emergencia! Justo cuando pensábamos que los animalitos iban a entrar al granero, un fuerte ruido los asustó y salieron corriendo. Ahora están todos desordenados otra vez. ¡Oh no! Pero no se preocupen, el cuartel general nos ha enviado un nuevo código que debemos seguir para ayudarlos a entrar en el granero. ¡Vamos a calmarnos y a resolver este problema juntos!" },
+                          { "step": 2, "time": { "30": 7, "40": 10, "50": 10 }, "accion": "Reproduce la DIAPOSITIVA 23 'Código de Rescate K1' y motiva a los Genios que sigan el nuevo código proyectado en la pantalla.", "dialogo": "En la pantalla, verán el 'Código de Rescate de la Granja'. Este es el código especial que necesitamos seguir para que los animalitos entren al granero sin volver a asustarse. ¡Vamos a observarlo muy bien! Cada animalito tiene un color específico que debemos usar. Sigamos este código paso a paso, con mucho cuidado, para que todos los animalitos puedan entrar al granero y descansar seguros. ¡Adelante, CODE SQUAD!" }
+                         ]
+                },
+                "K2": {
+                    "5.2": [
+                          { "step": 1, "time": { "30": 1, "40": 1, "50": 1 }, "accion": "Reproduce la Diapositiva 12 y explica a los Genios en qué consiste el reto.", "dialogo": "¡CODE SQUAD! Para que los animalitos puedan entrar al granero, vamos a crear un código para ayudarlos a encontrar el patrón correcto. Vamos a utilizar los bloques para representar a nuestros amigos de la granja. Por ejemplo, podemos usar un bloque azul para la vaca y un bloque amarillo para la oveja. Ustedes pueden elegir los colores que quieran. ¡Vamos a crear un código divertido y colorido para ayudar a los animalitos!" },
+                          { "step": 2, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 13, distribuye el papel y los materiales y asegúrate de que cada niño tenga material para trabajar en parejas.", "dialogo": "Aquí tienen su papel y colores. Ahora, en sus hojas, van a dibujar a los animalitos y asignarles bloques de color. Recuerden, vamos a ayudar a los animalitos a encontrar su camino al granero. ¡Prepárense para codificar!" },
+                          { "step": 3, "time": { "30": 5, "40": 7, "50": 10 }, "accion": "Reproduce la Diapositiva 14, supervisa el proceso de creación del código en pares. Resuelve dudas, explica o corrige lo que sea necesario.", "dialogo": "Trabajen juntos para dibujar su código. Recuerden, cada animalito debe tener su propio bloque de color. ¡Vamos a ver cuán bien pueden codificar!" }
+                         ],
+                    "6": [
+                          { "step": 1, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la DIAPOSITIVA 18 y dirige a los Genios para que intercambien los códigos que hicieron.", "dialogo": "¡Excelente trabajo, CODE SQUAD! Ahora, vamos a ayudar a los animalitos de la granja. Voy a pasar a ver sus códigos para ponerles nombre, los voy a recoger y se los voy a asignar a otro equipo. Cada equipo usará el código de otro equipo para asegurarse de que los animalitos sigan el patrón correcto. ¡Vamos a intercambiar los códigos y empezar a construir!" },
+                          { "step": 2, "time": { "30": 7, "40": 10, "50": 10 }, "accion": "Reproduce la DIAPOSITIVA 20 'Challenge de Reconocimiento de Patrones K2', entrega los códigos a los equipos uno a uno y que inicien a construir.", "dialogo": "¡Adelante, CODE SQUAD! Vamos a ayudar a los animalitos a encontrar su camino al granero. Usen el código que recibieron para organizar a los animalitos en el orden correcto. Recuerden seguir el patrón que está en el código. ¡Vamos a ver cómo lo hacen!" }
+                         ],
+                    "7": [
+                          { "step": 1, "time": { "30": 3, "40": 4, "50": 5 }, "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo a los Genios.", "dialogo": "¡CODE SQUAD! ¡Tenemos una emergencia! Justo cuando pensábamos que los animalitos iban a entrar al granero, un fuerte ruido los asustó y salieron corriendo. Ahora están todos desordenados otra vez. ¡Oh no! Pero no se preocupen, el cuartel general nos ha enviado un nuevo código que debemos seguir para ayudarlos a entrar en el granero. ¡Vamos a calmarnos y a resolver este problema juntos!" },
+                          { "step": 2, "time": { "30": 7, "40": 10, "50": 10 }, "accion": "Reproduce la DIAPOSITIVA 24 'Código de Rescate K2' y motiva a los Genios que sigan el nuevo código proyectado en la pantalla.", "dialogo": "En la pantalla, verán el 'Código de Rescate de la Granja'. Este es el código especial que necesitamos seguir para que los animalitos entren al granero sin volver a asustarse. ¡Vamos a observarlo muy bien! Cada animalito tiene un color específico que debemos usar. Sigamos este código paso a paso, con mucho cuidado, para que todos los animalitos puedan entrar al granero y descansar seguros. ¡Adelante, CODE SQUAD!" }
+                         ]
+                },
+                "K3": {
+                    "5.3": [
+                          { "step": 1, "time": { "30": 1, "40": 1, "50": 1 }, "accion": "Reproduce la Diapositiva 15 y explica a los Genios en qué consiste el reto.", "dialogo": "¡CODE SQUAD! Para que los animalitos puedan entrar al granero, vamos a crear un código para ayudarlos a encontrar el patrón correcto. Vamos a utilizar los bloques para representar a nuestros amigos de la granja. Por ejemplo, podemos usar un bloque azul para la vaca, un bloque amarillo para la oveja,  y un bloque naranja para el perro. Ustedes pueden elegir los colores que quieran. ¡Vamos a crear un código divertido y colorido para ayudar a los animalitos!" },
+                          { "step": 2, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 16, distribuye el papel y los materiales y asegúrate de que cada niño tenga material para trabajar en parejas.", "dialogo": "Aquí tienen su papel y colores. Ahora, en sus hojas, van a dibujar a los animalitos y asignarles bloques de color. Recuerden, vamos a ayudar a los animalitos a encontrar su camino al granero. ¡Prepárense para codificar!" },
+                          { "step": 3, "time": { "30": 5, "40": 7, "50": 10 }, "accion": "Reproduce la Diapositiva 17, supervisa el proceso de creación del código en pares. Resuelve dudas, explica o corrige lo que sea necesario.", "dialogo": "Trabajen juntos para dibujar su código. Recuerden, cada animalito debe tener su propio bloque de color. ¡Vamos a ver cuán bien pueden codificar!" }
+                         ],
+                    "6": [
+                          { "step": 1, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la DIAPOSITIVA 18 y dirige a los Genios para que intercambien los códigos que hicieron.", "dialogo": "¡Excelente trabajo, CODE SQUAD! Ahora, vamos a ayudar a los animalitos de la granja. Voy a pasar a ver sus códigos para ponerles nombre, los voy a recoger y se los voy a asignar a otro equipo. Cada equipo usará el código de otro equipo para asegurarse de que los animalitos sigan el patrón correcto. ¡Vamos a intercambiar los códigos y empezar a construir!" },
+                          { "step": 2, "time": { "30": 7, "40": 10, "50": 10 }, "accion": "Reproduce la DIAPOSITIVA 21 'Challenge de Reconocimiento de Patrones K3', entrega los códigos a los equipos uno a uno y que inicien a construir.", "dialogo": "¡Adelante, CODE SQUAD! Vamos a ayudar a los animalitos a encontrar su camino al granero. Usen el código que recibieron para organizar a los animalitos en el orden correcto. Recuerden seguir el patrón que está en el código. ¡Vamos a ver cómo lo hacen!" }
+                         ],
+                    "7": [
+                          { "step": 1, "time": { "30": 3, "40": 4, "50": 5 }, "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo a los Genios.", "dialogo": "¡CODE SQUAD! ¡Tenemos una emergencia! Justo cuando pensábamos que los animalitos iban a entrar al granero, un fuerte ruido los asustó y salieron corriendo. Ahora están todos desordenados otra vez. ¡Oh no! Pero no se preocupen, el cuartel general nos ha enviado un nuevo código que debemos seguir para ayudarlos a entrar en el granero. ¡Vamos a calmarnos y a resolver este problema juntos!" },
+                          { "step": 2, "time": { "30": 7, "40": 10, "50": 10 }, "accion": "Reproduce la DIAPOSITIVA 25 'Código de Rescate K3' y motiva a los Genios que sigan el nuevo código proyectado en la pantalla.", "dialogo": "En la pantalla, verán el 'Código de Rescate de la Granja'. Este es el código especial que necesitamos seguir para que los animalitos entren al granero sin volver a asustarse. ¡Vamos a observarlo muy bien! Cada animalito tiene un color específico que debemos usar. Sigamos este código paso a paso, con mucho cuidado, para que todos los animalitos puedan entrar al granero y descansar seguros. ¡Adelante, CODE SQUAD!" }
+                         ]
+                }
+            };
+
+            var activities = {
+                "activity-0": true,
+                "activity-1": true,
+                "activity-2": true,
+                "activity-3": true,
+                "activity-4": true,
+                "activity-5": true,
+                "activity-6": true,
+                "activity-7": steps[level]["7"].some(s => s.time[time] > 0),
+                "activity-8": true
+            };
+
+            Object.keys(activities).forEach(function(activityId) {
+                var activityElement = document.getElementById(activityId);
+                if (activities[activityId]) {
+                    activityElement.style.display = "block";
+                } else {
+                    activityElement.style.display = "none";
+                }
+            });
+
+            renderActivitySteps("activity-5-content", steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time);
+            renderActivitySteps("activity-6-content", steps[level]["6"], time);
+            renderActivitySteps("activity-7-content", steps[level]["7"], time);
+
+            document.getElementById("activity-5-total-time").innerText = calculateTotalTime(steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time) + " minutos";
+            document.getElementById("activity-6-total-time").innerText = calculateTotalTime(steps[level]["6"], time) + " minutos";
+            document.getElementById("activity-7-total-time").innerText = calculateTotalTime(steps[level]["7"], time) + " minutos";
+        }
+
+        function renderActivitySteps(contentId, steps, time) {
+            var contentContainer = document.getElementById(contentId);
+            contentContainer.innerHTML = "";
+            steps.forEach(function(step) {
+                if (step.time[time] > 0) {
+                    var row = document.createElement("tr");
+                    var stepCell = document.createElement("td");
+                    var dialogCell = document.createElement("td");
+
+                    stepCell.innerHTML = "<strong>PASO " + step.step + " (" + step.time[time] + " minutos):</strong> " + step.accion;
+                    dialogCell.innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> " + step.dialogo;
+
+                    row.appendChild(stepCell);
+                    row.appendChild(dialogCell);
+                    contentContainer.appendChild(row);
+                }
+            });
+        }
+
+        function calculateTotalTime(steps, time) {
+            return steps.reduce((total, step) => total + step.time[time], 0);
+        }
+
+        updateContent();
+    </script>
+</body>
+</html>
